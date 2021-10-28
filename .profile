@@ -28,3 +28,7 @@ export LANG=zh_CN.utf8
 export GOPROXY=https://goproxy.io,direct
 ### Path
 export PATH="/usr/local/go/bin:$PATH"
+# export PATH="/Users/ianvzs/go/bin:$PATH"
+# export PATH="/usr/local/go/bin:$PATH"
+
+# ----------------------------profile: 已完成配置---------------------------
