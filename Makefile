@@ -7,7 +7,12 @@ clean:
 init_profile:
 	cat .profile >> ~/.profile
 init_vim:
-
+	cp .vimrc ~/
+	mkdir ~/.vim/autoload/ -p
+	cp vim_plug/plug.vim ~/.vim/autoload/
+	git clone git@github.com:fatih/vim-go.git ~/.vim/plugged/vim-go
+	 git clone git@github.com:mattn/vim-goimports.git ~/.vim/plugged/vim-goimports
+	vim +PlugInstall
 init: init_profile init_vim
 
 check:

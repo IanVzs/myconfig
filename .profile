@@ -27,5 +27,4 @@ export LANG=zh_CN.utf8
 ### Proxy
 export GOPROXY=https://goproxy.io,direct
 ### Path
-# export PATH="/Users/ianvzs/go/bin:$PATH"
-# export PATH="/usr/local/go/bin:$PATH"
+export PATH="/usr/local/go/bin:$PATH"
