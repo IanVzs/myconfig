@@ -31,4 +31,10 @@ export PATH="/usr/local/go/bin:$PATH"
 # export PATH="/Users/ianvzs/go/bin:$PATH"
 # export PATH="/usr/local/go/bin:$PATH"
 
+## Bash
+### AutoFill
+source /usr/share/bash-completion/bash_completion
+### Proxy
+export http_proxy=http://192.168.0.71:8001
+export https_proxy=http://192.168.0.71:8001
 # ----------------------------profile: 已完成配置---------------------------
