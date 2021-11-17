@@ -1,4 +1,5 @@
 .PHONY: clean init check help
+SHELL := /bin/bash
 
 all: check
 
@@ -22,18 +23,28 @@ init_git:
 	git config --global i18n.commit.encoding utf-8    # 提交信息编码
 	git config --global i18n.logoutputencoding utf-8  # 输出 log 编码
 	export LESSCHARSET=utf-8 # 最后一条命令是因为 git log 默认使用 less 分页，所以需要 bash 对 less 命令进行 utf-8 编码
+init_bash:
+	@echo "init make completion"
+	sudo cp make  /usr/share/bash-completion/completions
+	@echo "init bash_completion"
+	sudo cp bash_completion /usr/share/bash-completion/bash_completion
+	source /usr/share/bash-completion/bash_completion
 
 init: init_profile init_vim init_git
 
 check:
 	tail ~/.profile | grep "配置"
-	@echo ""
 	@echo "---------------------------------------------------------"
 	@echo ""
 	tail ~/.vimrc | grep "配置"
+	@echo "---------------------------------------------------------"
+	@echo "bash 命令自动补全检测"
+	ls /usr/share/bash-completion/bash_completion
+	@echo "---------------------------------------------------------"
 	@echo ""
 
 help:
 	@echo "make: 检测各个配置文件是否已经配置完毕"
+	@echo "make init_bash: sudo need 配置bash命令自动补全"
 	@echo "make clean: 还原各个文件"
 
