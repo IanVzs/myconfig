@@ -29,6 +29,14 @@ init_bash:
 	@echo "init bash_completion"
 	sudo cp bash_completion /usr/share/bash-completion/bash_completion
 	source /usr/share/bash-completion/bash_completion
+init_jupyter:
+	pip install jupyter
+	pip install jupyter_contrib_nbextensions
+	jupyter contrib nbextension install --user --skip-running-check
+open_jupyter:
+	jupyter-notebook --generate-config -y
+	mv ~/.jupyter/jupyter_notebook_config.py ~/.jupyter/jupyter_notebook_config.py.bak
+	cp jupyter_notebook_config.py ~/.jupyter/jupyter_notebook_config.py
 
 init: init_profile init_vim init_git
 
@@ -46,5 +54,6 @@ check:
 help:
 	@echo "make: 检测各个配置文件是否已经配置完毕"
 	@echo "make init_bash: sudo need 配置bash命令自动补全"
+	@echo "make open_jupyter: 配置jupyter-notebook可在局域网访问 需保证在含有jupyter的环境下使用"
 	@echo "make clean: 还原各个文件"
 
