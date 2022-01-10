@@ -37,4 +37,6 @@ source /usr/share/bash-completion/bash_completion
 ### Proxy
 export http_proxy=http://192.168.0.71:8001
 export https_proxy=http://192.168.0.71:8001
+### Docker
+alias docker_ps="docker ps -a | awk '{print \$2,\$5,\$6,\$7,\$8}'"
 # ----------------------------profile: 已完成配置---------------------------
