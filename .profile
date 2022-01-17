@@ -6,8 +6,8 @@ alias curl_form="echo curl -i -X POST -d \'a=b\' http://url"
 alias git_reset="echo 'git fetch --all && git reset --hard origin/master && git pull'"
 
 ## git命令及合并
-alias gisee="git diff && git status && git branch"
-alias gipull="git pull && git pull origin master && git branch"
+alias gisee="git diff && git status && git branch && echo "
+alias gipull="git pull && git pull origin master && git branch && echo"
 alias gifix="git commit -am 'fix'"
 alias q="exit"
 
