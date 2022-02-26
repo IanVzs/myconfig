@@ -23,7 +23,7 @@ init_git:
 	git config --global i18n.commit.encoding utf-8    # 提交信息编码
 	git config --global i18n.logoutputencoding utf-8  # 输出 log 编码
 	export LESSCHARSET=utf-8 # 最后一条命令是因为 git log 默认使用 less 分页，所以需要 bash 对 less 命令进行 utf-8 编码
-init_bash:
+init_bash_auto_completion:
 	@echo "init make completion"
 	sudo cp make  /usr/share/bash-completion/completions
 	@echo "init bash_completion"
@@ -53,7 +53,8 @@ check:
 
 help:
 	@echo "make: 检测各个配置文件是否已经配置完毕"
-	@echo "make init_bash: sudo need 配置bash命令自动补全"
+	@echo "make init: init_profile init_vim init_git"
+	@echo "make init_bash_auto_completion: sudo need 配置bash命令自动补全"
 	@echo "make open_jupyter: 配置jupyter-notebook可在局域网访问 需保证在含有jupyter的环境下使用"
 	@echo "make clean: 还原各个文件"
 

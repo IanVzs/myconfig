@@ -35,8 +35,12 @@ export PATH="/usr/local/go/bin:$PATH"
 ### AutoFill
 source /usr/share/bash-completion/bash_completion
 ### Proxy
+#### NicoVPN
 export http_proxy=http://192.168.0.71:8001
 export https_proxy=http://192.168.0.71:8001
+#### Clash
+#export http_proxy=http://192.168.0.71:7890
+#export https_proxy=http://192.168.0.71:7891
 ### Docker
 alias docker_ps="docker ps -a | awk '{print \$2,\$5,\$6,\$7,\$8}'"
 # ----------------------------profile: 已完成配置---------------------------
