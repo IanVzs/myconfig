@@ -23,6 +23,10 @@ export MOBILE="ssh -p 8022 192.168.0.72"
 ## 语言支持
 export LANG=zh_CN.utf8
 
+## Nodejs
+### Path
+export PATH="/home/$USER/Apps/node/bin:$PATH"
+
 ## Golang
 ### Proxy
 export GOPROXY=https://goproxy.io,direct
