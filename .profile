@@ -26,6 +26,8 @@ export LANG=zh_CN.utf8
 ## Nodejs
 ### Path
 export PATH="/home/$USER/Apps/node/bin:$PATH"
+### gitbook
+alias gitbook="/home/$USER/blog/node_modules/gitbook-cli/bin/gitbook.js"
 
 ## Golang
 ### Proxy
