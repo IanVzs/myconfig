@@ -47,4 +47,8 @@ source /usr/share/bash-completion/bash_completion
 #export https_proxy=http://127.0.0.1:7891
 ### Docker
 alias docker_ps="docker ps -a | awk '{print \$2,\$5,\$6,\$7,\$8}'"
+
+# 依赖记录项
+## vbox: libqt5opengl5
+## kate: konsole
 # ----------------------------profile: 已完成配置---------------------------
