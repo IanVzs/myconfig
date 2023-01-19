@@ -51,4 +51,8 @@ alias docker_ps="docker ps -a | awk '{print \$2,\$5,\$6,\$7,\$8}'"
 # 依赖记录项
 ## vbox: libqt5opengl5
 ## kate: konsole
+
+# gi代理
+#git config --global --unset http.proxy
+#git config --global --unset https.proxy
 # ----------------------------profile: 已完成配置---------------------------
