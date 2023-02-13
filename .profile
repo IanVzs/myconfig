@@ -27,7 +27,7 @@ export LANG=zh_CN.utf8
 ### Path
 export PATH="/home/$USER/Apps/node/bin:$PATH"
 ### gitbook
-alias gitbook="/home/$USER/blog/node_modules/gitbook-cli/bin/gitbook.js"
+#alias gitbook="/home/$USER/blog/node_modules/gitbook-cli/bin/gitbook.js"
 
 ## Golang
 ### Proxy 配置 GOPROXY 环境变量
@@ -40,7 +40,7 @@ export PATH="/home/$USER/go/bin:$PATH"
 
 ## Bash
 ### AutoFill
-source /usr/share/bash-completion/bash_completion
+#source /usr/share/bash-completion/bash_completion
 ### Proxy
 #### NicoVPN
 #export http_proxy=http://192.168.0.71:8001
